@@ -1,0 +1,15 @@
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\bin\Debug\net8.0\PM-Domain.deps.json
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\bin\Debug\net8.0\PM-Domain.runtimeconfig.json
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\bin\Debug\net8.0\PM-Domain.dll
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\bin\Debug\net8.0\PM-Domain.pdb
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.csproj.AssemblyReference.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.AssemblyInfoInputs.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.AssemblyInfo.cs
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.csproj.CoreCompileInputs.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.sourcelink.json
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.dll
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\refint\PM-Domain.dll
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.pdb
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\PM-Domain.genruntimeconfig.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Domain\obj\Debug\net8.0\ref\PM-Domain.dll
