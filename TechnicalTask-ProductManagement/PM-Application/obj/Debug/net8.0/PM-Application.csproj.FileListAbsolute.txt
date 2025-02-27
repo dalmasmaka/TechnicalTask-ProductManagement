@@ -1,0 +1,15 @@
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\bin\Debug\net8.0\PM-Application.deps.json
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\bin\Debug\net8.0\PM-Application.runtimeconfig.json
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\bin\Debug\net8.0\PM-Application.dll
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\bin\Debug\net8.0\PM-Application.pdb
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.csproj.AssemblyReference.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.AssemblyInfoInputs.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.AssemblyInfo.cs
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.csproj.CoreCompileInputs.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.sourcelink.json
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.dll
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\refint\PM-Application.dll
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.pdb
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\PM-Application.genruntimeconfig.cache
+C:\Users\Dalma\Desktop\TechnicalTask-ProductManagement\TechnicalTask-ProductManagement\PM-Application\obj\Debug\net8.0\ref\PM-Application.dll
