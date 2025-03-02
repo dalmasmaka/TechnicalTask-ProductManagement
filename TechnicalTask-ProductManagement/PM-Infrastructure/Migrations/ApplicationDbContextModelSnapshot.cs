@@ -174,7 +174,7 @@ namespace PM_Infrastructure.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("FirstName")
+                    b.Property<string>("FullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -184,10 +184,10 @@ namespace PM_Infrastructure.Migrations
                     b.Property<DateTimeOffset?>("LockoutEnd")
                         .HasColumnType("datetimeoffset");
 
-                    b.Property<DateTime>("LogOutTimestamp")
+                    b.Property<DateTime?>("LogOutTimestamp")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("LoginTimestamp")
+                    b.Property<DateTime?>("LoginTimestamp")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("NormalizedEmail")
@@ -251,15 +251,20 @@ namespace PM_Infrastructure.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedBy")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<bool?>("isDeleted")
+                        .HasColumnType("bit");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("Categories");
                 });
@@ -298,13 +303,15 @@ namespace PM_Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<DateTime>("UpdatedAt")
+                    b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
                     b.Property<string>("UpdatedBy")
-                        .IsRequired()
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<bool?>("isDeleted")
+                        .HasColumnType("bit");
 
                     b.HasKey("Id");
 

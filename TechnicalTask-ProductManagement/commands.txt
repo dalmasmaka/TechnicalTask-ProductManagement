@@ -1,0 +1,5 @@
+Migration 
+Add-Migration InitialCreate -Project PM-Infrastructure -StartupProject PM-API
+
+Database Update
+Update-Database -Project PM-Infrastructure -StartupProject PM-API

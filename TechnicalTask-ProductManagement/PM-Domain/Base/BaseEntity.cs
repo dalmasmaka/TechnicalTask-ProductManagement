@@ -11,13 +11,13 @@ namespace PM_Domain.BaseEntities
     {
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        [Required]
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedAt { get; set; }
 
         [Required, MaxLength(100)]
         public string CreatedBy { get; set; }
-        [Required, MaxLength(100)]
-        public string UpdatedBy { get; set; }
+        [MaxLength(100)]
+        public string? UpdatedBy { get; set; }
+        public bool? isDeleted { get; set; }
 
     }
 }
