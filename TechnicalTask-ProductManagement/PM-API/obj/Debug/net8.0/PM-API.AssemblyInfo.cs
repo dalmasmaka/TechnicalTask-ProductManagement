@@ -11,10 +11,11 @@
 using System;
 using System.Reflection;
 
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("ed086225-0c5b-4dfb-961c-7c35b454e887")]
 [assembly: System.Reflection.AssemblyCompanyAttribute("PM-API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32c4c9775796d69d338977f967b94930f5714bdb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3546c2505d3ef4f08a48fde39b8f7a8f798639a8")]
 [assembly: System.Reflection.AssemblyProductAttribute("PM-API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PM-API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

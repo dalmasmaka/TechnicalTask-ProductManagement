@@ -11,8 +11,8 @@ namespace PM_Domain.Entities
 {
     public class ApplicationUser : IdentityUser
     {
-        public string FirstName { get; set; }
-        public DateTime LoginTimestamp { get; set; }
-        public DateTime LogOutTimestamp { get; set; } 
+        public string FullName { get; set; }
+        public DateTime? LoginTimestamp { get; set; }
+        public DateTime? LogOutTimestamp { get; set; }
     }
 }
