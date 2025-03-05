@@ -18,17 +18,19 @@ namespace PM_Application.Authorization
             _jwtSettings = configuration.GetSection("JwtSettings").Get<JwtSettings>();
         }
 
-        public string GenerateToken(string userId, string username, string role)
+        public string GenerateToken(string userId, string username, string email, string fullName, string role)
         {
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_jwtSettings.Key));
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]
             {
-                    new Claim("username", username),
-                    new Claim("id", userId),
-                    new Claim("role", role),
-                    new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
+                new Claim(JwtRegisteredClaimNames.Sub, userId), // Use standard "sub"
+                new Claim("username", username),
+                new Claim("email", email),
+                new Claim("role", role),
+                new Claim("fullName", fullName),
+                new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
 
             var token = new JwtSecurityToken(

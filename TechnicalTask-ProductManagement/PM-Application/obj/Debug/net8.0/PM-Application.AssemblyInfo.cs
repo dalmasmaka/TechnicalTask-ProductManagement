@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PM-Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3546c2505d3ef4f08a48fde39b8f7a8f798639a8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+24efcb7fb9b7fabc54489da3c780d462681f5ab7")]
 [assembly: System.Reflection.AssemblyProductAttribute("PM-Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PM-Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

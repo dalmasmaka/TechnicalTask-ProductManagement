@@ -2,6 +2,7 @@
 using Microsoft.Extensions.Logging;
 using PM_Domain.Entities;
 using PM_Infrastructure.Data;
+using PM_Infrastructure.DTOs;
 using PM_Infrastructure.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -92,5 +93,52 @@ namespace PM_Infrastructure.Repositories
                 throw;
             }
         }
+
+        public async Task<PagedResult<Product>> GetProductSearchAdvanceAsync(string name, string status, int? categoryId, string sortColumn, string sortDirection, int pageSize, int page)
+        {
+            var query = _context.Products.AsQueryable();
+
+            if (!string.IsNullOrEmpty(name))
+            {
+                query = query.Where(p => p.Name.Contains(name));
+            }
+
+            if (!string.IsNullOrEmpty(status))
+            {
+                query = query.Where(p => p.Status == status);
+            }
+
+            if (categoryId != 0 && categoryId != null)
+            {
+                query = query.Where(p => p.CategoryId == categoryId);
+            }
+
+            if (!string.IsNullOrEmpty(sortColumn))
+            {
+                query = sortDirection == "desc"
+                    ? query.OrderByDescending(e => EF.Property<Product>(e, sortColumn))
+                    : query.OrderBy(e => EF.Property<Product>(e, sortColumn));
+            }
+
+            var products = await query.Include(x => x.Category)
+            .Skip((page - 1) * pageSize) // Skip products for previous pages
+            .Take(pageSize) // Take the number of products based on pageSize
+            .ToListAsync();
+
+            var totalCount = await query.CountAsync();
+
+            return new PagedResult<Product>
+            {
+                Items = products,
+                TotalCount = totalCount,
+                PageNumber = page,
+                PageSize = pageSize
+            };
+        }
+        public async Task<int> CountAsync()
+        {
+            return await _context.Products.CountAsync();
+        }
+
     }
 }

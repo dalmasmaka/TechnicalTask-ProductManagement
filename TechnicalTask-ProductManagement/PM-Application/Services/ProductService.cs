@@ -6,20 +6,23 @@ using PM_Application.MappingProfiles;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using PM_Domain.Entities;
+using PM_Infrastructure.Repositories;
 
 namespace PM_Application.Services
 {
     public class ProductService : IProductService
     {
         private readonly IProductRepository _productRepository;
+        private readonly ICategoryRepository _categoryRepository;
         private readonly IMapper _mapper; 
         private readonly ILogger<ProductService> _logger;
 
-        public ProductService(IProductRepository productRepository, IMapper mapper, ILogger<ProductService> logger)
+        public ProductService(IProductRepository productRepository, IMapper mapper, ILogger<ProductService> logger, ICategoryRepository categoryRepository)
         {
             _productRepository = productRepository;
             _mapper = mapper; 
             _logger = logger;
+            _categoryRepository = categoryRepository;
         }
 
         public async Task<CreateProductDTO> CreateAsync(CreateProductDTO productDto)
@@ -30,6 +33,7 @@ namespace PM_Application.Services
                 product.CreatedBy = "SomeUser";
                 product.UpdatedAt = null;
                 product.UpdatedBy = null;
+                product.isDeleted = false;
                 await _productRepository.CreateAsync(product);
                 return _mapper.Map<CreateProductDTO>(product); 
             }
@@ -100,7 +104,7 @@ namespace PM_Application.Services
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while updating product with ID"+ productDto.Id + ".");
-                throw new KeyNotFoundException("An error occurred while updating the product. Please try again later.");
+                throw new ApplicationException("An error occurred while updating the product. Please try again later.");
             }
         }
 
@@ -127,5 +131,37 @@ namespace PM_Application.Services
                 throw new KeyNotFoundException("An error occurred while deleting the product. Please try again later.");
             }
         }
+        public async Task<PagedResult<ProductDTO>> GetPagedProductsAsync(int pageNumber, int pageSize, string sortColumn = "Name", string sortDirection = "desc", FilterProductDTO filterObject = null)
+        {
+            try
+            {
+                var res = await _productRepository.GetProductSearchAdvanceAsync(filterObject.Name, filterObject.Status, filterObject.CategoryId, sortColumn, sortDirection, pageSize, pageNumber);
+                return new PagedResult<ProductDTO>
+                {
+                    Items = _mapper.Map<IEnumerable<ProductDTO>>(res.Items),
+                    TotalCount = res.TotalCount,
+                    PageNumber = pageNumber,
+                    PageSize = pageSize
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "An error occurred while retrieving paged products.");
+                throw new ApplicationException("An error occurred while retrieving paged products.", ex);
+            }
+        }
+        public async Task<int> GetTotalProductCountAsync()
+        {
+            try
+            {
+                return await _productRepository.CountAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex.Message, "An error occurred while retrieving total product count.");
+                throw new ApplicationException("An error occurred while retrieving total product count.", ex);
+            }
+        }
+
     }
 }

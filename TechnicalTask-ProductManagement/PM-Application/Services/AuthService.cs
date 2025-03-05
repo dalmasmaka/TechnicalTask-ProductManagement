@@ -8,6 +8,7 @@ using PM_Application.DTOs.User;
 using PM_Application.Interfaces;
 using PM_Domain.Entities;
 using PM_Infrastructure.Interfaces;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace PM_Application.Services
@@ -30,6 +31,22 @@ namespace PM_Application.Services
             _httpContextAccessor = httpContextAccessor;
         }
 
+        public async Task<ResponseDTO> DeleteUser(string id)
+        {
+            if(string.IsNullOrEmpty(id))
+            {
+                _logger.LogWarning("User id is empty.");
+                throw new KeyNotFoundException("User id is empty.");
+            }
+            var result = await _authRepository.DeleteUser(id);
+            if (!result)
+            {
+                _logger.LogWarning("User deletion failed.");
+                return new ResponseDTO { Success = false, Message = "User deletion failed." };
+            }
+            return new ResponseDTO { Success = true, Message = "User deleted successfully." };
+        }
+
         public async Task<IEnumerable<UserDTO>> GetAllUsers()
         {
             try
@@ -49,11 +66,25 @@ namespace PM_Application.Services
                 throw new KeyNotFoundException(ex.Message);
             }
         }
+
+        public Task<int> GetTotalUsersCountAsync()
+        {
+            try
+            {
+                return _authRepository.GetTotalUsersCountAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, ex.Message);
+                throw new KeyNotFoundException("Error fetching the total number of users.");
+            }
+        }
+
         public async Task<UserDTO> GetUserById(string id)
         {
             try
             {
-                var user = _authRepository.GetUserById(id);
+                var user =await  _authRepository.GetUserById(id);
                 if (user == null)
                 {
                     _logger.LogWarning("User not found.");
@@ -80,7 +111,7 @@ namespace PM_Application.Services
                 var result = await _authRepository.Login(username, password);
                 if (!result)
                 {
-                    return new AuthResponseDTO { Success = true, Message = "User log in failed." };
+                    return new AuthResponseDTO { Success = false, Message = "User log in failed." };
                 }
                 var user = await _userManager.FindByNameAsync(username);
                 if (user == null) 
@@ -89,7 +120,7 @@ namespace PM_Application.Services
                 }
                 var roles = await _userManager.GetRolesAsync(user);
                 string userRole = roles.FirstOrDefault() ?? "User";
-                var token = _jwtHelper.GenerateToken(username, password, userRole); 
+                var token = _jwtHelper.GenerateToken(user.Id, username, user.Email, user.FullName, userRole);
                 return new AuthResponseDTO { Success = true, Message = "User logged in successfully.", Token = token };
             }
             catch (Exception ex)
@@ -129,21 +160,16 @@ namespace PM_Application.Services
             }
         }
 
-        public async Task<ResponseDTO> Register(string email, string username, string password, string confirmPassword, string role)
+        public async Task<ResponseDTO> Register(string email, string username, string password, string role)
         {
             try
             {
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password) || string.IsNullOrEmpty(confirmPassword))
+                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
                     _logger.LogWarning("Email, username or password is empty.");
                     throw new ArgumentException("Email, username or password cannot be empty.");
                 }
 
-                if (password != confirmPassword)
-                {
-                    _logger.LogWarning("Passwords do not match.");
-                    throw new ArgumentException("Passwords do not match.");
-                }
                 var userExistsResponse = await UserExists(username);
                 if (userExistsResponse.Success)
                 {
@@ -169,6 +195,32 @@ namespace PM_Application.Services
                 _logger.LogError(ex, ex.Message);
                 return new ResponseDTO { Success = false, Message = "An error occurred while registering. Please try again later." }; 
             }
+        }
+
+        public async Task<UpdateUserDto> UpdateUser(UpdateUserDto user)
+        {
+            if(user == null)
+            {
+                _logger.LogWarning("User is empty.");
+                throw new KeyNotFoundException("User is empty.");
+            }
+            var updatedUser = await _authRepository.GetUserById(user.Id);
+            if (updatedUser == null)
+            {
+                _logger.LogWarning("User not found.");
+                throw new KeyNotFoundException("User not found.");
+            }
+            updatedUser.FullName = user.FullName;
+            updatedUser.Email = user.Email;
+            updatedUser.UserName = user.Username;
+
+            var result = await _authRepository.UpdateUser(updatedUser);
+            if (!result)
+            {
+                _logger.LogWarning("Error updating user");
+
+            }
+            return _mapper.Map<UpdateUserDto>(updatedUser);
         }
 
         public async Task<ResponseDTO> UserExists(string username)

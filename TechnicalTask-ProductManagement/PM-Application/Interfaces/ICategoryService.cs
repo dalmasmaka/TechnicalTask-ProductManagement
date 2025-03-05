@@ -16,5 +16,6 @@ namespace PM_Application.Interfaces
         Task<UpdateCategoryDTO> UpdateAsync(UpdateCategoryDTO categoryDto);
         Task DeleteAsync(int id);
         Task<bool> HasProductsAsync(int categoryId);
+        Task<int> GetTotalCategoriesCountAsync();
     }
 }

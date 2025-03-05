@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using PM_Application.DTOs;
 using PM_Application.DTOs.User;
 using PM_Application.Interfaces;
 using System.Security.Claims;
@@ -9,7 +10,7 @@ namespace PM_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IAuthService _authService;
@@ -33,6 +34,24 @@ namespace PM_API.Controllers
         {
             var user = await _authService.GetUserById(id);
             return Ok(user);
+        }
+        [HttpPut("{id}")]
+        public async Task<ActionResult<UpdateUserDto>> Update(string id, UpdateUserDto user)
+        {
+            var updatedUser = await _authService.UpdateUser(user);
+            return Ok(updatedUser);
+        }
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<ResponseDTO>> Delete(string id)
+        {
+            var result = await _authService.DeleteUser(id);
+            return Ok(result);
+        }
+        [HttpGet("count")]
+        public async Task<IActionResult> GetTotalUsersCountAsync()
+        {
+            var result = await _authService.GetTotalUsersCountAsync();
+            return Ok(result);
         }
     }
 

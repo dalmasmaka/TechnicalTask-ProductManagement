@@ -9,6 +9,7 @@ using PM_API.Middleware;
 using PM_Application.Authorization;
 using PM_Application.Interfaces;
 using PM_Application.Services;
+using PM_Application.MappingProfiles;
 using PM_Domain.Entities;
 using PM_Domain.Interfaces;
 using PM_Infrastructure.AuthServices;
@@ -16,62 +17,32 @@ using PM_Infrastructure.Data;
 using PM_Infrastructure.Interfaces;
 using PM_Infrastructure.Repositories;
 using Serilog;
+using Swashbuckle.AspNetCore.Filters;
 using System.Text;
+
 
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddEndpointsApiExplorer();
-
-builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
-    .AddEntityFrameworkStores<ApplicationDbContext>()
-    .AddDefaultTokenProviders();
-
-
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
-
-builder.Services.AddScoped<Argon2PasswordHasher>();
-builder.Services.AddScoped<IConnectionStringRepository, ConnectionStringRepository>();
-builder.Services.AddScoped<IProductRepository, ProductRepository>();
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
-builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<IAuthRepository, AuthRepository>();
-builder.Services.AddScoped<IAuthService, AuthService>();
-builder.Services.AddSingleton<IPasswordHasher<ApplicationUser>, Argon2PasswordHasher>();
-builder.Services.AddScoped<JwtHelper>();
-
-builder.Services.AddHttpContextAccessor();
-builder.Services.AddOptions();
 builder.Services.AddDbContext<ApplicationDbContext>((serviceProvider, options) =>
 {
     var connectionStringProvider = serviceProvider.GetRequiredService<IConnectionStringRepository>();
     options.UseSqlServer(connectionStringProvider.GetConnectionString());
 });
+
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost", builder =>
-        builder.WithOrigins(["https://localhost:44360"])
-               .AllowAnyMethod()
-               .AllowAnyHeader()
-               .AllowCredentials());
+    options.AddPolicy("AllowAll", policy =>
+        policy.WithOrigins("https://localhost:44360", "http://localhost:4200", "https://localhost:7005") 
+              .AllowAnyMethod()
+              .AllowAnyHeader()
+              .AllowCredentials());
 });
 
-builder.Services.AddSwaggerGen(options =>
-{
-    var jwtSecurityScheme = new OpenApiSecurityScheme
-    {
-        BearerFormat = "JWT",
-        Name = "Authorization",
-        In = ParameterLocation.Header,
-        Type = SecuritySchemeType.ApiKey, 
-        Scheme = JwtBearerDefaults.AuthenticationScheme,
-    };
-    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
-    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, jwtSecurityScheme);
-});
 
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -90,6 +61,68 @@ builder.Services.AddAuthentication(options =>
     };
 });
 builder.Services.AddAuthorization();
+
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(typeof(CategoryMapper));
+
+
+builder.Services.AddScoped<Argon2PasswordHasher>();
+builder.Services.AddScoped<IConnectionStringRepository, ConnectionStringRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<IAuthRepository, AuthRepository>();
+builder.Services.AddScoped<IAuthService, AuthService>();
+builder.Services.AddSingleton<IPasswordHasher<ApplicationUser>, Argon2PasswordHasher>();
+builder.Services.AddScoped<JwtHelper>();
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddOptions();
+
+//builder.Services.AddSwaggerGen(options =>
+//{
+//    options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme
+//    {
+//        Description = "Standard Authorization header using the Bearer scheme. Example: \"bearer {token}\"",
+//        In = "header",
+//        Name = "Authorization",
+//        Type = "apiKey"
+//    });
+
+//    options.OperationFilter<SecurityRequirementsOperationFilter>();
+//});
+
+builder.Services.AddSwaggerGen(options =>
+{
+    var jwtSecurityScheme = new OpenApiSecurityScheme
+    {
+
+        BearerFormat = "JWT",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = JwtBearerDefaults.AuthenticationScheme,
+        Description = "JWT Authorization header using the Bearer scheme."
+    };
+
+    options.SwaggerDoc("v1", new OpenApiInfo { Title = "Demo API", Version = "v1" });
+
+    options.AddSecurityDefinition(JwtBearerDefaults.AuthenticationScheme, jwtSecurityScheme);
+
+    options.OperationFilter<SecurityRequirementsOperationFilter>();
+
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            jwtSecurityScheme, new string[] {}
+        }
+    });
+});
+
 
 
 //builder.Services.AddAuthorization(options =>
@@ -120,13 +153,14 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 app.UseHttpsRedirection();
+app.UseCors("AllowAll");
 app.UseRouting();
-app.UseCors("AllowLocalhost");
+
 
 app.UseAuthentication(); 
 app.UseAuthorization();
 
-app.UseMiddleware<AuthMiddleware>();
+//app.UseMiddleware<AuthMiddleware>();
 app.UseMiddleware<RequestLoggingMiddleware>(); 
 app.UseMiddleware<GlobalExceptionHandlingMiddleware>();
 app.UseMiddleware<ExceptionHandlingMiddleware>();

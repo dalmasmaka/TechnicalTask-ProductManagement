@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using PM_Application.DTOs.Product;
 using PM_Application.Interfaces;
 
@@ -6,6 +7,7 @@ namespace PM_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class ProductController : ControllerBase
     {
         private readonly IProductService _productService;
@@ -32,7 +34,7 @@ namespace PM_API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<CreateProductDTO>> Create( CreateProductDTO productDto)
+        public async Task<ActionResult<CreateProductDTO>> Create(CreateProductDTO productDto)
         {
             var createdProduct = await _productService.CreateAsync(productDto);
             return Ok(new { Message = "Product created successfully.", Product = createdProduct });
@@ -56,5 +58,29 @@ namespace PM_API.Controllers
             await _productService.DeleteAsync(id);
             return Ok(new { Message = "Product deleted successfully." });
         }
+        [HttpPost("paged")]
+        public async Task<ActionResult<PagedResult<ProductDTO>>> GetPagedProducts(
+                                                                        FilterProductDTO filterObject,
+                                                                        int pageNumber,
+                                                                        int pageSize,
+                                                                        string sortColumn = "Name",
+                                                                        string sortDirection = "desc"
+                                                                        )
+        {
+            if (filterObject is null)
+            {
+                throw new ArgumentNullException(nameof(filterObject));
+            }
+
+            var products = await _productService.GetPagedProductsAsync(pageNumber, pageSize, sortColumn, sortDirection, filterObject);
+            return Ok(products);
+        }
+        [HttpGet("count")]
+        public async Task<IActionResult> GetTotalProductsCount()
+        {
+            var totalProducts = await _productService.GetTotalProductCountAsync();
+            return Ok(totalProducts);
+        }
+
     }
 }

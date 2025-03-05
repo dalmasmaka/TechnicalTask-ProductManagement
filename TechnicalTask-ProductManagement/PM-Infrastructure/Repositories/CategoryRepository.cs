@@ -61,7 +61,10 @@ namespace PM_Infrastructure.Repositories
         {
             try
             {
-                return await _context.Categories.ToListAsync();
+                var result = await _context.Categories
+                    .Where(c => c.isDeleted == false)
+                    .ToListAsync();
+                return result;
             }
             catch (Exception ex)
             {
@@ -74,15 +77,20 @@ namespace PM_Infrastructure.Repositories
         {
             try
             {
-                 return await _context.Categories.FindAsync(id);
-                
-               
+                return await _context.Categories.FindAsync(id);
+
+
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error occurred while fetching category with ID " + id + ".");
                 throw;
             }
+        }
+
+        public async Task<int> GetTotalCategoriesCountAsync()
+        {
+            return await _context.Categories.CountAsync();
         }
 
         public async Task<bool> HasProductsAsync(int categoryId)

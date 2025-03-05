@@ -16,6 +16,9 @@ namespace PM_Infrastructure.Interfaces
         Task<bool> Logout(string id);
         Task <IEnumerable<ApplicationUser>> GetAllUsers();
         Task<ApplicationUser> GetUserById(string id);
+        Task<bool>UpdateUser(ApplicationUser user);
 
+        Task<bool>DeleteUser(string id);
+        Task<int> GetTotalUsersCountAsync();
     }
 }

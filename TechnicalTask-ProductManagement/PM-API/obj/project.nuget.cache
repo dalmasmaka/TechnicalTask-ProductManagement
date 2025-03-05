@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "9MYKIyNMzzo=",
+  "dgSpecHash": "8F23tMz5CIs=",
   "success": true,
   "projectFilePath": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\PM-API.csproj",
   "expectedPackageFiles": [
@@ -80,11 +80,14 @@
     "C:\\Users\\Dalma\\.nuget\\packages\\microsoft.win32.registry\\4.5.0\\microsoft.win32.registry.4.5.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\mono.texttemplating\\2.2.1\\mono.texttemplating.2.2.1.nupkg.sha512",
+    "C:\\Users\\Dalma\\.nuget\\packages\\scrutor\\3.3.0\\scrutor.3.3.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\serilog\\4.2.0\\serilog.4.2.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\serilog.extensions.logging\\8.0.0\\serilog.extensions.logging.8.0.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\serilog.sinks.console\\6.0.0\\serilog.sinks.console.6.0.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\serilog.sinks.file\\6.0.0\\serilog.sinks.file.6.0.0.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\swashbuckle.aspnetcore\\6.6.2\\swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
+    "C:\\Users\\Dalma\\.nuget\\packages\\swashbuckle.aspnetcore.filters\\8.0.2\\swashbuckle.aspnetcore.filters.8.0.2.nupkg.sha512",
+    "C:\\Users\\Dalma\\.nuget\\packages\\swashbuckle.aspnetcore.filters.abstractions\\8.0.2\\swashbuckle.aspnetcore.filters.abstractions.8.0.2.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.6.2\\swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.6.2\\swashbuckle.aspnetcore.swaggergen.6.6.2.nupkg.sha512",
     "C:\\Users\\Dalma\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.6.2\\swashbuckle.aspnetcore.swaggerui.6.6.2.nupkg.sha512",
