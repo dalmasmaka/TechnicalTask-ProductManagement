@@ -15,5 +15,6 @@ namespace PM_Infrastructure.Interfaces
         Task UpdateAsync(Category category);
         Task DeleteAsync(int id);
         Task<bool> HasProductsAsync(int categoryId);
+        Task<int> GetTotalCategoriesCountAsync();
     }
 }

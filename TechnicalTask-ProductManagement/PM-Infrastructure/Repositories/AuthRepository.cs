@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity; 
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PM_Infrastructure.Interfaces;
 using PM_Infrastructure.AuthServices;
@@ -42,11 +42,11 @@ namespace PM_Infrastructure.Repositories
                 UserName = username,
                 FullName = username,
                 PasswordHash = password,
-                
+
             };
 
             var result = await _userManager.CreateAsync(user, password);
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(user, role);
                 return true;
@@ -65,7 +65,7 @@ namespace PM_Infrastructure.Repositories
 
             if (passwordVerificationResult == PasswordVerificationResult.Success)
             {
-                user.LoginTimestamp = DateTime.UtcNow; 
+                user.LoginTimestamp = DateTime.UtcNow;
                 await _userManager.UpdateAsync(user);
                 return true;
             }
@@ -78,7 +78,7 @@ namespace PM_Infrastructure.Repositories
         public async Task<IEnumerable<ApplicationUser>> GetAllUsers()
         {
             return await _userManager.Users.ToListAsync();
-          
+
         }
         public async Task<ApplicationUser> GetUserById(string userId)
         {
@@ -93,6 +93,37 @@ namespace PM_Infrastructure.Repositories
 
             return result.Succeeded;
 
+        }
+
+        public async Task<bool> UpdateUser(ApplicationUser user)
+        {
+            var result = await _userManager.UpdateAsync(user);
+
+            if (result.Succeeded)
+            {
+                return true;  // Successfully updated
+            }
+            else
+            {
+                // Log or handle the errors here if needed
+                foreach (var error in result.Errors)
+                {
+                }
+                return false;  // Failed to update
+            }
+        }
+
+
+        public async Task<bool> DeleteUser(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            var result = await _userManager.DeleteAsync(user);
+            return result.Succeeded;
+        }
+
+        public async Task<int> GetTotalUsersCountAsync()
+        {
+            return await _userManager.Users.CountAsync();
         }
     }
 }

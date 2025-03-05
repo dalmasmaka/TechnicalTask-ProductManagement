@@ -32,8 +32,7 @@ namespace PM_Application.Services
             {
                 var category = _mapper.Map<Category>(categoryDto);
                 category.CreatedBy = "SomeUser";
-                category.UpdatedAt = null;
-                category.UpdatedBy = null;
+                category.isDeleted = false;
                 await _categoryRepository.CreateAsync(category);
                 return _mapper.Map<CreateCategoryDTO>(category);
             }
@@ -100,6 +99,19 @@ namespace PM_Application.Services
             }
         }
 
+        public Task<int> GetTotalCategoriesCountAsync()
+        {
+            try
+            {
+                return _categoryRepository.GetTotalCategoriesCountAsync();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Error occurred while fetching total categories count.");
+                throw new ApplicationException("An error occurred while fetching the total categories count. Please try again later.");
+            }
+        }
+
         public async Task<bool> HasProductsAsync(int categoryId)
         {
             try
@@ -132,6 +144,7 @@ namespace PM_Application.Services
                 _mapper.Map(categoryDto, category);
                 category.UpdatedAt = DateTime.UtcNow;
                 category.UpdatedBy = "SomeUser";
+                category.isDeleted = false;
                 await _categoryRepository.UpdateAsync(category);
                 return _mapper.Map<UpdateCategoryDTO>(category);
             }

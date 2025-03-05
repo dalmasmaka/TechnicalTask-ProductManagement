@@ -1,6 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.IdentityModel.Protocols.OpenIdConnect;
 using PM_Application.DTOs.Category;
 using PM_Application.Interfaces;
 
@@ -8,6 +7,7 @@ namespace PM_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class CategoryController : ControllerBase
     {
         private readonly ICategoryService _categoryService;
@@ -63,6 +63,12 @@ namespace PM_API.Controllers
             
             await _categoryService.DeleteAsync(categoryId);
             return Ok(new { message = "Category deleted successfully." });
+        }
+        [HttpGet("count")]
+        public async Task<ActionResult<int>> GetTotalCategoriesCount()
+        {
+            var totalCategoriesCount = await _categoryService.GetTotalCategoriesCountAsync();
+            return Ok(totalCategoriesCount);
         }
     }
 }

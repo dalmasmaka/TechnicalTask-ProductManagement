@@ -21,26 +21,18 @@ namespace PM_API.Controllers
             _logger = logger;
             _httpContextAccessor = httpContextAccessor;
         }
-        [HttpGet]
-        [Authorize]
-        public async Task<ActionResult<IEnumerable<UserDTO>>> GetAll()
-        {
-            var users = await _authService.GetAllUsers();
-            return Ok(users);
-        }
+
         [HttpPost]
         [Route("register")]
-        [AllowAnonymous]
         public async Task<IActionResult> Register([FromBody] RegisterUserDTO registerDTO)
         {
-            var result = await _authService.Register(registerDTO.Email, registerDTO.Username, registerDTO.Password, registerDTO.ConfirmPassword, registerDTO.Role);
+            var result = await _authService.Register(registerDTO.Email, registerDTO.Username, registerDTO.Password, registerDTO.Role);
             return Ok(result);
         }
         [HttpPost("login")]
-        [AllowAnonymous]
-        public async Task<IActionResult> Login(string username, string password)
+        public async Task<IActionResult> Login([FromBody] LoginUserDTO user)
         {
-            var result = await _authService.Login(username, password);
+            var result = await _authService.Login(user.Username, user.Password);
             return Ok(result);
 
         }
