@@ -1,16 +1,9 @@
 ﻿using AutoMapper;
 using Microsoft.Extensions.Logging;
 using PM_Application.DTOs.Category;
-using PM_Application.DTOs.Product;
 using PM_Application.Interfaces;
 using PM_Domain.Entities;
 using PM_Infrastructure.Interfaces;
-using PM_Infrastructure.Repositories;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PM_Application.Services
 {

@@ -1,9 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
 using PM_Domain.Entities;
-using PM_Infrastructure.AuthServices;
-using System;
-using System.Threading.Tasks;
 
 namespace PM_Infrastructure.Data
 {

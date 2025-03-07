@@ -68,7 +68,6 @@ namespace PM_API.Middleware
                 var principal = handler.ValidateToken(token, validationParameters, out var validatedToken);
                 context.User = principal;
 
-
                 // Optionally check if the token is of the expected type (JWT)
                 if (validatedToken is JwtSecurityToken jwtToken && jwtToken.Header.Alg != SecurityAlgorithms.HmacSha256)
                 {
@@ -79,7 +78,6 @@ namespace PM_API.Middleware
             }
             catch (Exception ex)
             {
-                // Log or handle the exception if needed
                 throw new SecurityTokenException("Token validation failed.", ex);
             }
         }

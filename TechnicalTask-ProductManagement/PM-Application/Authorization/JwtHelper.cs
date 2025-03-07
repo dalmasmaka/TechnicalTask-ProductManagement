@@ -1,7 +1,4 @@
 ﻿using Microsoft.Extensions.Configuration;
-using Microsoft.AspNetCore.Http;
-using Microsoft.Extensions.Options;
-using Microsoft.IdentityModel.Logging;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
@@ -25,7 +22,7 @@ namespace PM_Application.Authorization
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, userId), // Use standard "sub"
+                new Claim(JwtRegisteredClaimNames.Sub, userId), //  "sub" = "userId"
                 new Claim("username", username),
                 new Claim("email", email),
                 new Claim("role", role),

@@ -1,7 +1,6 @@
 ﻿using Konscious.Security.Cryptography;
 using Microsoft.AspNetCore.Identity;
 using PM_Domain.Entities;
-using System;
 using System.Text;
 
 namespace PM_Infrastructure.AuthServices

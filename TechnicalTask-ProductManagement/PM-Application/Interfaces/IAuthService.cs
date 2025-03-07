@@ -1,11 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
-using PM_Application.DTOs;
+﻿using PM_Application.DTOs;
 using PM_Application.DTOs.User;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace PM_Application.Interfaces
 {

@@ -1,6 +1,4 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using PM_Infrastructure.Interfaces;
 using PM_Infrastructure.AuthServices;
@@ -73,8 +71,6 @@ namespace PM_Infrastructure.Repositories
             return false;
         }
 
-
-
         public async Task<IEnumerable<ApplicationUser>> GetAllUsers()
         {
             return await _userManager.Users.ToListAsync();
@@ -101,18 +97,16 @@ namespace PM_Infrastructure.Repositories
 
             if (result.Succeeded)
             {
-                return true;  // Successfully updated
+                return true; 
             }
             else
             {
-                // Log or handle the errors here if needed
                 foreach (var error in result.Errors)
                 {
                 }
-                return false;  // Failed to update
+                return false;  
             }
         }
-
 
         public async Task<bool> DeleteUser(string id)
         {

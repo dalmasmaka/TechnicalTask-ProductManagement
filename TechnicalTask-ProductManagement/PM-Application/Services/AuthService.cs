@@ -8,7 +8,6 @@ using PM_Application.DTOs.User;
 using PM_Application.Interfaces;
 using PM_Domain.Entities;
 using PM_Infrastructure.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
 
 
 namespace PM_Application.Services

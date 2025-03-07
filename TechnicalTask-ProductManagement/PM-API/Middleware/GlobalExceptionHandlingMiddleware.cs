@@ -19,8 +19,8 @@
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "An unhandled exception occurred.");
-                httpContext.Response.StatusCode = 500;
+                _logger.LogError(ex, "An unhandled exception occurred."); //kthen plain text
+                httpContext.Response.StatusCode = 500; //me status code specifik 500
                 await httpContext.Response.WriteAsync("An unexpected error occurred.");
             }
         }
