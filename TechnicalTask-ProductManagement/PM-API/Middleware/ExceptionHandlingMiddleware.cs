@@ -36,8 +36,8 @@ namespace PM_API.Middleware
             var errorResponse = new { message = exception.Message };
             response.StatusCode = exception switch
             {
-                KeyNotFoundException => (int)HttpStatusCode.NotFound,
-                ApplicationException => (int)HttpStatusCode.BadRequest,
+                KeyNotFoundException => (int)HttpStatusCode.NotFound, //404 not found errors
+                ApplicationException => (int)HttpStatusCode.BadRequest, // 400 bad request errors  
                 _ => (int)HttpStatusCode.InternalServerError
             };
 
@@ -46,3 +46,4 @@ namespace PM_API.Middleware
         }
     }
 }
+//kthen json me mesazhin e gabimit dhe status code te duhur apo dinamik ne rast se ndodh nje gabim i paparashikuar

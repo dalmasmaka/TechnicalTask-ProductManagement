@@ -2,11 +2,8 @@
 using PM_Infrastructure.Interfaces;
 using PM_Application.DTOs.Product;
 using PM_Application.Interfaces;
-using PM_Application.MappingProfiles;
-using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using PM_Domain.Entities;
-using PM_Infrastructure.Repositories;
 
 namespace PM_Application.Services
 {

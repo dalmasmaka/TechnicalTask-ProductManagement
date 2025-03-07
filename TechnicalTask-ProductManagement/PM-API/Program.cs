@@ -4,7 +4,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
-using PM_API.Exceptions;
 using PM_API.Middleware;
 using PM_Application.Authorization;
 using PM_Application.Interfaces;

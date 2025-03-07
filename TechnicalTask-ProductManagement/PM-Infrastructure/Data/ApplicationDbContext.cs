@@ -1,13 +1,11 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
-using PM_Domain.Entities;  // Your custom entities (example: Product, Category, etc.)
-using Microsoft.AspNetCore.Identity;
+using PM_Domain.Entities;  
 
 namespace PM_Infrastructure.Data
 {
-    public class ApplicationDbContext : IdentityDbContext<ApplicationUser> // Use your custom ApplicationUser
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser> 
     {
-        // Constructor to inject DbContextOptions into the base class
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
@@ -29,7 +27,6 @@ namespace PM_Infrastructure.Data
                 .HasIndex(c => c.Name)
                 .IsUnique();
 
-            // Additional custom entity configurations here if needed
         }
     }
 }

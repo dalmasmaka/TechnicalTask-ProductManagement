@@ -3,40 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\middleware\\exceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\middleware\\globalexceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\middleware\\globalexceptionhandlingmiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{08A59792-E15D-427F-9FBE-61643FFBB917}|PM-Application\\PM-Application.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{08A59792-E15D-427F-9FBE-61643FFBB917}|PM-Application\\PM-Application.csproj|solutionrelative:pm-application\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{08A59792-E15D-427F-9FBE-61643FFBB917}|PM-Application\\PM-Application.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-application\\authorization\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{08A59792-E15D-427F-9FBE-61643FFBB917}|PM-Application\\PM-Application.csproj|solutionrelative:pm-application\\authorization\\jwthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{08A59792-E15D-427F-9FBE-61643FFBB917}|PM-Application\\PM-Application.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{08A59792-E15D-427F-9FBE-61643FFBB917}|PM-Application\\PM-Application.csproj|solutionrelative:pm-application\\interfaces\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F7BEEE8-64D2-4CC3-8910-801B05A2D5EB}|PM-Infrastructure\\PM-Infrastructure.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-infrastructure\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F7BEEE8-64D2-4CC3-8910-801B05A2D5EB}|PM-Infrastructure\\PM-Infrastructure.csproj|solutionrelative:pm-infrastructure\\interfaces\\iauthrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F7BEEE8-64D2-4CC3-8910-801B05A2D5EB}|PM-Infrastructure\\PM-Infrastructure.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F7BEEE8-64D2-4CC3-8910-801B05A2D5EB}|PM-Infrastructure\\PM-Infrastructure.csproj|solutionrelative:pm-infrastructure\\repositories\\authrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9F7BEEE8-64D2-4CC3-8910-801B05A2D5EB}|PM-Infrastructure\\PM-Infrastructure.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-infrastructure\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{9F7BEEE8-64D2-4CC3-8910-801B05A2D5EB}|PM-Infrastructure\\PM-Infrastructure.csproj|solutionrelative:pm-infrastructure\\interfaces\\icategoryrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|c:\\users\\dalma\\desktop\\technicaltask-productmanagement\\technicaltask-productmanagement\\pm-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{74D27BF1-DF07-4540-AEE6-984967EC6D4D}|PM-API\\PM-API.csproj|solutionrelative:pm-api\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 186,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,112 +50,94 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthController.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\AuthController.cs",
-              "RelativeDocumentMoniker": "PM-API\\Controllers\\AuthController.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\AuthController.cs",
-              "RelativeToolTip": "PM-API\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAADwvyYAAAATAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "ExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "PM-API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "PM-API\\Middleware\\ExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAowCgAAAA8AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T06:11:30.937Z"
+              "WhenOpened": "2025-03-07T12:19:59.731Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GlobalExceptionHandlingMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "RelativeDocumentMoniker": "PM-API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "RelativeToolTip": "PM-API\\Middleware\\GlobalExceptionHandlingMiddleware.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:19:47.533Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CategoryController.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\CategoryController.cs",
-              "RelativeDocumentMoniker": "PM-API\\Controllers\\CategoryController.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\CategoryController.cs",
-              "RelativeToolTip": "PM-API\\Controllers\\CategoryController.cs",
-              "ViewState": "AgIAAC4AAAAAAAAAAAAcwEoAAAAAAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Program.cs",
+              "RelativeDocumentMoniker": "PM-API\\Program.cs",
+              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Program.cs",
+              "RelativeToolTip": "PM-API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T06:11:16.402Z"
+              "WhenOpened": "2025-03-07T12:17:37.997Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ProductController.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\ProductController.cs",
-              "RelativeDocumentMoniker": "PM-API\\Controllers\\ProductController.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\ProductController.cs",
-              "RelativeToolTip": "PM-API\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAAD0AAAAAAAAAAADwv0MAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:59:18.637Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "PM-API\\Controllers\\UserController.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\UserController.cs",
-              "RelativeToolTip": "PM-API\\Controllers\\UserController.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAwwDEAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:56:34.009Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Application\\Interfaces\\IAuthService.cs",
-              "RelativeDocumentMoniker": "PM-Application\\Interfaces\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Application\\Interfaces\\IAuthService.cs",
-              "RelativeToolTip": "PM-Application\\Interfaces\\IAuthService.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAA1wBUAAAAsAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:55:55.419Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Application\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "PM-Application\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Application\\Services\\AuthService.cs",
               "RelativeToolTip": "PM-Application\\Services\\AuthService.cs",
-              "ViewState": "AgIAAFgAAAAAAAAAAAAvwGcAAAAIAAAAAAAAAA==",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAgwHkAAABtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:55:52.192Z",
+              "WhenOpened": "2025-03-07T12:14:00.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "AuthRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Infrastructure\\Repositories\\AuthRepository.cs",
-              "RelativeDocumentMoniker": "PM-Infrastructure\\Repositories\\AuthRepository.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Infrastructure\\Repositories\\AuthRepository.cs",
-              "RelativeToolTip": "PM-Infrastructure\\Repositories\\AuthRepository.cs",
-              "ViewState": "AgIAAHQAAAAAAAAAAAAAwIAAAAABAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "JwtHelper.cs",
+              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Application\\Authorization\\JwtHelper.cs",
+              "RelativeDocumentMoniker": "PM-Application\\Authorization\\JwtHelper.cs",
+              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Application\\Authorization\\JwtHelper.cs",
+              "RelativeToolTip": "PM-Application\\Authorization\\JwtHelper.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwBEAAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:55:15.249Z"
+              "WhenOpened": "2025-03-07T12:13:38.026Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "PM-API\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\UserController.cs",
+              "RelativeToolTip": "PM-API\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T12:13:11.963Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "IAuthRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Infrastructure\\Interfaces\\IAuthRepository.cs",
-              "RelativeDocumentMoniker": "PM-Infrastructure\\Interfaces\\IAuthRepository.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Infrastructure\\Interfaces\\IAuthRepository.cs",
-              "RelativeToolTip": "PM-Infrastructure\\Interfaces\\IAuthRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABUAAAAIAAAAAAAAAA==",
+              "Title": "AuthController.cs",
+              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\AuthController.cs",
+              "RelativeDocumentMoniker": "PM-API\\Controllers\\AuthController.cs",
+              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-API\\Controllers\\AuthController.cs",
+              "RelativeToolTip": "PM-API\\Controllers\\AuthController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:55:00.544Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ICategoryRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Infrastructure\\Interfaces\\ICategoryRepository.cs",
-              "RelativeDocumentMoniker": "PM-Infrastructure\\Interfaces\\ICategoryRepository.cs",
-              "ToolTip": "C:\\Users\\Dalma\\Desktop\\TechnicalTask-ProductManagement\\TechnicalTask-ProductManagement\\PM-Infrastructure\\Interfaces\\ICategoryRepository.cs",
-              "RelativeToolTip": "PM-Infrastructure\\Interfaces\\ICategoryRepository.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-05T05:54:51.87Z"
+              "WhenOpened": "2025-03-07T12:12:55.146Z",
+              "EditorCaption": ""
             }
           ]
         },

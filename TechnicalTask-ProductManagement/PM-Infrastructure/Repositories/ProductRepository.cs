@@ -4,9 +4,6 @@ using PM_Domain.Entities;
 using PM_Infrastructure.Data;
 using PM_Infrastructure.DTOs;
 using PM_Infrastructure.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace PM_Infrastructure.Repositories
 {
